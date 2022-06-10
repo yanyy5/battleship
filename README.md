@@ -39,15 +39,15 @@ You must also define a type Location to represent grid locations in the game, 
 
 In summary, in addition to defining the GameState and Location types, you must define following functions:
 
-**toLocation :: String → Maybe Location**gives Just the Location named by the string, or Nothing if the string is not a valid location name.
+**toLocation :: String → Maybe Location** gives Just the Location named by the string, or Nothing if the string is not a valid location name.
 
-**fromLocation :: Location → String**gives back the two-character string version of the specified location; for any location *loc*, toLocation (fromLocation *loc*) should return Just *loc*.
+**fromLocation :: Location → String** gives back the two-character string version of the specified location; for any location *loc*, toLocation (fromLocation *loc*) should return Just *loc*.
 
-**feedback :: [Location] → [Location] → (Int,Int,Int)**takes a target and a guess, respectively, and returns the appropriate feedback, as specified above.
+**feedback :: [Location] → [Location] → (Int,Int,Int)** takes a target and a guess, respectively, and returns the appropriate feedback, as specified above.
 
-**initialGuess :: ([Location],GameState)**takes no input arguments, and returns a pair of an initial guess and a game state.
+**initialGuess :: ([Location],GameState)** takes no input arguments, and returns a pair of an initial guess and a game state.
 
-**nextGuess :: ([Location],GameState) → (Int,Int,Int) → ([Location],GameState)**takes as input a pair of the previous guess and game state, and the feedback to this guess as a triple of the number of correct locations, the number of guesses exactly one square away from a ship, and the number exactly two squares away, and returns a pair of the next guess and new game state.
+**nextGuess :: ([Location],GameState) → (Int,Int,Int) → ([Location],GameState)** takes as input a pair of the previous guess and game state, and the feedback to this guess as a triple of the number of correct locations, the number of guesses exactly one square away from a ship, and the number exactly two squares away, and returns a pair of the next guess and new game state.
 
 ## Hints
 
